@@ -26,7 +26,7 @@ sp_rename 'Mobile.id','Uniqueid'
 sp_rename'Mobile','Mark'
 sp_rename 'Mark','Mobile'
 update Mobile set Age=25 where Uniqueid=101 or name='Abhay';
-//update Mobile set salary=salary+salary*25/100 where name='Abhay'
+---update Mobile set salary=salary+salary*25/100 where name='Abhay'
 delete from Mobile where Uniqueid=106 
 select * from Mobile
 select name,MobileNumber from Mobile// Selection
@@ -35,11 +35,11 @@ select * from Mobile order by name  Asc
 select * from Mobile order by name Desc
 
 select  sum(Uniqueid) from Mobile 
-
+drop table Sim
 select sum(Uniqueid),count(*) from Mobile where name='Gautam'
 select sum(uniqueid),count(name),Max(Uniqueid),Min(Uniqueid) from Mobile where name ='Gaurav'
-// direct not null
-// AND  or OR
+---direct not null
+--- AND  or OR
 select * from Mobile where name !='Gautam' And name!='Abhay' and name!='Anmol'
 select * from Mobile where name Not  IN ('Gautam','Abhay','Mohit')
 select * from Mobile where name  In ('Gautam','Gaurav','Anmol')
@@ -50,21 +50,37 @@ select * from Mobile where name Like '_A%_'
 select name ,count( * )from Mobile  group by name
 select name, count(*) from Mobile where name not in('Abhay') group by name
 select name, count(*) from Mobile group by name having name not In ('Gautam')
-//select name, count(*) from Mobile group by name having name  is  not ( 'Gautam')
+---select name, count(*) from Mobile group by name having name  is  not ( 'Gautam')
 select * from Mobile
 create table Sim(
 Did int,
 name varchar(10),
 )
-
-create table sim1(
-id int,
+insert into Sim values(101,'sales')
+insert into Sim values(102,'Rent')
+insert into Sim values(103,'backoffice')
+insert into Sim values(104,'software')
+ create table Sim1(
+ id int,
 ename varchar(10),
-mobileNumber varchar(10),
-Did int )
-insert into sim1 values(201,'Gautam','8409844260',101)
-insert into sim1 values(202,'Gaurav','9661426504',102)
-insert into sim1 values(203,'Anmol','7033132629',103)
-insert into sim1 values(204,'mohit','8789194785',104)
-select * from sim
+mobileNumber varchar(10)
+
+
+ )
+insert into Sim1 values(201,'Gautam','8409844260')
+insert into Sim1 values(202,'Gaurav','9661426504')
+insert into Sim1 values(203,'Anmol','7033132629')
+insert into Sim1 values(204,'mohit','8789194785')
+select * from Sim
+select * from Sim1
+select id,ename,mobileNumber,name from Sim1 cross join Sim
+select id,ename,mobileNumber,name from Sim1 Inner join Sim ON Sim1.Did=Sim.Did
+
 drop table sim1
+select s1.id,s1.ename,s1.mobileNumber,s.name from Sim1 As s1 Right join  Sim As s On s1.id=s.Did
+select s1.id,s1.ename,s1.mobileNumber,s.name from Sim1 As s1 Left join  Sim As s On s1.id=s.Did
+select s1.id,s1.ename,s1.mobileNumber,s.name from Sim1 As s1 full join  Sim As s On s1.id=s.Did
+
+
+
+select s.id,s.ename.s.mobileNumber from Sim1 As s, Sim1 As s1 where s.id>s1.id and s1.ename='mohit'
