@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\bin\Debug\ProgramE.exe.config
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\bin\Debug\ProgramE.exe
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\bin\Debug\ProgramE.pdb
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\obj\Debug\ProgramE.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\obj\Debug\ProgramE.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\obj\Debug\ProgramE.exe
+C:\Users\admin\source\repos\Csharp-bt-jul22-gautamdev7033132629\ProgramE\ProgramE\obj\Debug\ProgramE.pdb
